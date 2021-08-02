@@ -1,0 +1,1318 @@
+
+
+.dinosaur{
+    width: 100%;
+    overflow: hidden;
+}
+/* phần header */
+.header__navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: 80px;
+    background-color: #2f312e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 999;
+}
+.header__navbar__img__link{
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    border: 1px solid var(--white-color);
+    padding: 2px;
+    border-radius: 3px;
+    display: block;
+}
+.header__navbar__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.header__navbar__item__link:hover{
+    color: var(--primary-color);
+}
+.header__navbar__item__link{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white-color);
+    display: block;
+    text-decoration: none;
+    padding: 16px;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+    transition: 0.3s;
+}
+.header__navbar__talk-btn{
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    border-radius: 3px;
+}
+.header__navbar__talk-btn:hover{
+    background-color:#3fa330;
+    border-color: var(--white-color);
+}
+.header__navbar__talk-btn:hover .header__navbar__talk-btn__text,
+.header__navbar__talk-btn:hover .header__navbar__talk-btn__icon{
+    color: var(--white-color);
+}
+.header__navbar__talk-btn__icon{
+    font-size: 2rem;
+    padding: 12px;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+.header__navbar__talk-btn__text{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    padding-right: 12px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.header__navbar__wrap-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* phần header__navbar__mb-tl */
+.header__navbar__mb-tl{
+    padding: 12px 0 12px 40px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+}
+.header__navbar__mb-tl__icon{
+    position: relative;
+    width: 32px;
+    height: 6px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    margin: 4px 0;
+    display: block;
+    transition: 0.3s;
+}
+.header__navbar__mb-tl__icon::before{
+    position: absolute;
+    bottom: calc(100% + 6px);
+    right: 0;
+    content: "";
+    width: 42px;
+    height: 6px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    display: block;
+    transition: 0.3s;
+}
+.header__navbar__mb-tl__icon::after{
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    content: "";
+    width: 42px;
+    height: 6px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    display: block;
+    transition: 0.3s;
+}
+.header__navbar__mb-tl__list{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    list-style: none;
+    padding: 0;
+    background-color: #181b17;
+    padding: 100px 0;
+    transition: 0.3s;
+    animation: navbarAppear 0.3s linear;
+    -webkit-animation: navbarAppear 0.3s linear;
+}
+@keyframes navbarAppear{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+.header__navbar__mb-tl__item{
+    margin: auto;
+}
+.header__navbar__mb-tl__link{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: block;
+    text-transform:uppercase;
+    line-height: 3rem;
+    padding: 30px 20px;
+    text-align: center;
+}
+.header__navbar__mb-tl__link:hover{
+    color: var(--white-color);
+}
+.click__navbar__mb-tl:checked ~ .header__navbar__mb-tl__list{
+    display: block;
+}
+.click__navbar__mb-tl:checked ~ .header__navbar__mb-tl__icon{
+    background-color: transparent;
+}
+.click__navbar__mb-tl:checked ~ .header__navbar__mb-tl__icon::before{
+    display: block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    background-color: red;
+}
+.click__navbar__mb-tl:checked ~ .header__navbar__mb-tl__icon::after{
+    display: block;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 0;
+    background-color: red;
+}
+
+
+/* phần slider */
+.slider__background{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(-80deg, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.8)),
+    url(../img/background-slider.svg);      
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider__background__Leaf1 {
+    position: absolute;
+    width: 900px;
+    height: 960px;
+    top: -20%;
+    right: -10%;
+    background:url(https://www.designzillas.com/themes/custom/bedrock/images/hero/palm.svg),url(https://www.designzillas.com/themes/custom/bedrock/images/hero/palm.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-12deg);
+    filter: brightness(0.8);
+    transform-origin: top;
+    transition: 0.3s;
+    animation: moveLeaf1 infinite 10s linear;
+    -webkit-animation: moveLeaf1 infinite 10s linear;
+}
+@keyframes moveLeaf1{
+    0%{
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+}
+.slider__background__Leaf2{
+    position: absolute;
+    width: 750px;
+    height: 1200px;
+    top: 95%;
+    right: 80%;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/hero/palm.svg),url(https://www.designzillas.com/themes/custom/bedrock/images/hero/palm.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-80deg);
+    filter: brightness(0.8);
+    transition: 0.3s;
+    transform-origin: center top;
+    animation: moveLeaf2 infinite 8s linear;
+    -webkit-animation: moveLeaf2 infinite 8s linear;
+}
+
+@keyframes moveLeaf2{
+    0%{
+        transform: rotate(-80deg);
+    }
+    50%{
+        transform: rotate(-82deg); 
+    }
+}
+.slider__backgound__dinosour-child{     
+    width: 260px;
+    height: 260px;
+    zoom: 0.7;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/little-zilla-head.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    animation: gaow infinite 10s ease-out;
+    -webkit-animation: gaow infinite 10s ease-out;
+}
+@keyframes gaow{
+    0%{
+        left: 0%;
+    }100%{
+        left: 120%;
+    }
+}
+.sider__background__dinosour-child__text{
+    position: absolute;
+    bottom: 105%;
+    font-size: 2rem;
+    width: 100%;
+    color: var(--white-color);
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.slider__backgound__dinosour-child__eye-left{
+    position: absolute;
+    top: 67px;
+    left: 158px;
+    width: 8px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: 0.3s;
+    animation: moveEyes infinite 1s ease-out;
+    -webkit-animation: moveEyes infinite 1s ease-out;
+}
+.slider__backgound__dinosour-child__eye-right{
+    position: absolute;
+    top: 67px;
+    right: 60px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: 0.1s;
+    animation: moveEyes infinite 1s ease-out;
+    -webkit-animation: moveEyes infinite 1s ease-out;
+}
+@keyframes moveEyes{
+    0%{
+        
+    }50%{
+        transform: translateX(3px);
+        transform: scale(3);
+    }100%{
+    }
+}
+.slider__backgound__dinosour-child1{     
+    width: 260px;
+    height: 260px;
+    zoom: 0.6;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/little-zilla-head.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    transition: 0.3s;
+    animation: gaow1 infinite 10s ease-out;
+    -webkit-animation: gaow1 infinite 10s ease-out;
+}
+@keyframes gaow1{
+    0%{
+        left: -50%;
+    }100%{
+        left: 100%;
+    }
+}
+.slider__backgound__dinosour-child2{
+    width: 260px;
+    height: 260px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/little-zilla-head.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    zoom: 0.9;
+    position: absolute;
+    bottom: 74%;
+    left: 12%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    transform: rotate(160deg);
+    animation: gaow2 infinite 10s ease-out;
+    -webkit-animation: gaow2 infinite 10s ease-out;
+}
+@keyframes gaow2{
+    0%{
+        bottom: 100%;
+    }50%{
+        bottom: 73%;
+    }80%{
+        bottom: 73%;
+    }100%{
+        bottom: 100%;
+    }
+}
+
+.slider__background__bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/grunge-stripe.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.slider__background__content{
+    position: absolute;
+    top: 26%;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s;
+    animation: moveContent infinite  0.3s linear;
+    -webkit-animation: moveContent infinite  5s linear;
+}
+@keyframes moveContent{
+    0%{
+        
+    }50%{
+        margin-left: -6px;
+    }
+}
+.slider__background__content__description{
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    padding: 12px 0;
+    margin-left: 200px;
+    text-transform: capitalize;
+}
+.slider__background__content__description::before{
+    content: "";
+    width: 100px;
+    height: 10px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% + 20px);
+}
+.slider__background__content__title-main{
+    font-size: 7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-family: 'Permanent Marker', cursive;
+    padding: 12px 200px;
+    margin: 0;
+    line-height: 8rem;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+.slider__background__content__title-main span{
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    text-transform:lowercase;
+}
+
+
+
+
+/* phần  container */
+
+.container__growth{
+    position: relative;
+    min-height: 750px;
+    width: 100vw;
+    overflow: hidden;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/bg-paint.jpg);
+    background-attachment: fixed;
+}
+.container__growth::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/grunge-stripe-bottom-black.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.container__growth1{
+    width: 100%;
+    height: 750px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/claws-cutout-left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+.container__growth-content{
+    width: 100%;
+    height: 750px;
+    background-color: var(--white-color);
+    padding: 60px 0 130px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container__video__content__title-extra,
+.container__growth-content__title-extra{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+}
+.container__video__content__title-main,
+.container__growth-content__title-main{
+    font-size: 8rem;
+    font-weight: 600;
+    line-height: 8rem;
+    color: var(--primary-color);
+    font-family: 'Permanent Marker', cursive;
+    padding: 0 12px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.container__video__content__text,
+.container__growth-content__text{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Hind', sans-serif;
+    line-height: 4rem;
+    color: var(--text-color);
+    padding-left: 10px;
+    text-align: center;
+}
+.container__video__content__btn,
+.container__growth-content__btn{
+    width: 70%;
+    height: 60px;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 3px;
+    color: var(--white-color);
+    padding: 12px;
+    border: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+.container__video__content__btn:hover,
+.container__growth-content__btn:hover{
+    background-color: #2cad18;
+}
+.container__growth2{
+    width: 100%;
+    height: 750px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/claws-cutout-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+/* phần container__top-website */
+.container__top-website{
+    width: 100%;
+    min-height: 750px;
+    background-color: #101010;
+    padding: 60px 0 130px 0;
+
+}
+.container__top-website-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.container__top-website__titel-extra{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+    padding:0 20px;
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+}
+.container__top-website__tilte-main{
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 8rem;
+    color: var(--primary-color);
+    font-family: 'Permanent Marker', cursive;
+    padding: 0 20px;
+    display: block;
+}
+.container__top-website__text{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Hind', sans-serif;
+    line-height: 4rem;
+    color: #979b9d;
+    padding:0 20px;
+}
+.container__top-website__btn{
+    width: 60%;
+    height: 60px;
+    background-color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 3px;
+    color: var(--white-color);
+    padding: 12px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+.container__top-website__btn:hover{
+    background-color: #2cad18;
+}
+.container__top-website__link:hover{
+    color: #ff8a00;
+}
+.container__top-website__link{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+.container__top-website__link i{
+    width: 50px;
+    text-align: center;
+}
+.container__top-website-wrap__img{
+    width: 100%;
+    height: 750px;
+    background: linear-gradient(rgba(0,0,0,0.5), transparent, #101010),
+    url(../img/ảnh11.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 20px;
+    position: relative;
+}
+
+.container__top-website-wrap__bird1{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow infinite 8s ease-out;
+    -webkit-animation: gaow infinite 8s ease-out;
+}
+.container__top-website-wrap__bird2{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow5 infinite 8s ease-out;
+    -webkit-animation: gaow5 infinite 8s ease-out;
+}
+@keyframes gaow5{
+    0%{
+        left: -10%;
+    }100%{
+        left: 100%;
+    }
+}
+.container__top-website-wrap__bird3{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow4 infinite 10s ease-out;
+    -webkit-animation: gaow4 infinite 10s ease-out;
+}
+@keyframes gaow4{
+    0%{
+        left: 0%;
+        top: 10%;
+    }50%{
+        
+    }100%{
+        left: 110%;
+    }
+}
+
+
+/* phần container__video */
+.container__video{
+    width: 100%;
+    min-height: 750px;
+    background-color: #101010;
+    padding: 60px 0 130px 0;
+    position: relative;
+}
+.container__video::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/grunge-stripe-bottom-black.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+.container__video__group{
+    position: relative;
+}
+.container__video__background{
+    position: relative;
+    width: 100%;
+    height: 750px;
+    background: url(../img/ảnh3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container__video__background::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    background: url(../img/ảnh4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container__video__background::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    background: url(../img/ảnh5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container__video__wrap{
+    position: absolute;
+    width: 680px;
+    height: 400px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.container__video__wrap iframe{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 3px;
+}
+.container__video__wrap::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/line-video-section-top.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container__video__dinosour-child{
+    content: "";
+    position: absolute;
+    top: 40%;
+    transform:translateY(-50%);
+    left: -62px;
+    width: 200px;
+    height: 200px;
+    background: url(../img/ảnh6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    zoom: 3;
+    transition: 0.3s;
+    animation: grow3 infinite 5s ease-in;
+    -webkit-animation: grow3 infinite 5s ease-in 3s;
+}
+@keyframes grow3 {
+    0%{
+
+    }80%{
+        transform: translateX(-100%);
+    }
+}
+.container__video__content{
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container__video__content__title-extra{
+    color: var(--white-color);
+    margin: 20px 0;
+}
+.container__video__content__text{
+    color: #979b9d;
+    margin: 20px 0;
+}
+
+/* phần container__team */
+
+.container__team{
+    position: relative;
+    width: 100%;
+    min-height: 1500px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/bg-jungle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container__team__group{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    zoom: 0.9;
+    z-index: 1;
+}
+.container__team__card{
+    position: relative;
+    width: 340px;
+    height: 200px;
+    color: rgba(87, 114, 77, 0.9);
+    background-color: currentColor;
+    margin: 80px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: 0.3s;
+}
+.container__team__card1{
+    background: url(https://www.designzillas.com/sites/default/files/2021-06/Google%20My%20Business%20Optimization_3.png);
+}
+.container__team__card2{
+    background: url(https://www.designzillas.com/sites/default/files/2021-07/CRM%20B2B%20Best%20Practices_3.png);
+}
+.container__team__card3{
+    background: url(https://www.designzillas.com/sites/default/files/2021-06/Darren%20Lengyel_3.png);
+}
+.container__team__card4{
+    background: url(https://www.designzillas.com/sites/default/files/2…0to%20Generate%20Qualified%20Leads%20Online_3.png);
+}
+.container__team__card5{
+    background: url(https://www.designzillas.com/sites/default/files/2021-04/Disabled%20Access%20Credit_3.png);
+}
+.container__team__card__wrap{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 114, 77, 0.9);
+    display: block;
+    text-decoration: none;
+}
+.container__team__card::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-width: 85px calc(340px / 2);
+    border-color: currentColor transparent transparent transparent ;
+    border-style: solid outset;
+    
+}
+.container__team__card::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    border-width: 85px calc(340px / 2);
+    border-color: transparent transparent currentColor transparent;
+    border-style: solid outset;
+}
+.container__team__card__avatar{
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    zoom: 0.6;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 1px solid var( --primary-color);
+    background: url(https://www.designzillas.com/sites/default/files/2019-07/zilla-head-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    z-index: 1;
+    transition: 1s;
+    transform-origin: top;
+}
+.container__team__card__date{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white-color);
+    padding-inline-end: 12px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.container__team__card__introduce{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--white-color);
+    font-family: 'Permanent Marker', cursive;
+    padding: 12px 20px;
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+.container__team__card__tile{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--white-color);
+    margin: 12px 20px;
+    text-align: center;
+    text-transform:initial;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.container__team__card__btn{
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    zoom: 0.8;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow:0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.container__team__card__btn:hover{
+    background-color: #3fa330;
+}
+.container__team__card__btn i {
+    font-size: 2rem;
+    color: var(--white-color);
+    text-align: center;
+}
+.container__team__card__wrap:hover{
+    background:linear-gradient(pink,var(--primary-color));
+}
+.container__team__card__wrap:hover .container__team__card__avatar{
+    zoom: 0.8;
+}
+.container__team__bird1{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow infinite 8s ease-out;
+}
+.container__team__bird2{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow1 infinite 8s ease-out;
+    -webkit-animation: gaow1 infinite 8s ease-out;
+}
+.container__team__bird3{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/pterodactyl.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.3s;
+    animation: gaow4 infinite 10s ease-out;
+    -webkit-animation: gaow4 infinite 10s ease-out;
+}
+@keyframes gaow4{
+    0%{
+        left: 0%;
+        top: 10%;
+    }50%{
+        
+    }100%{
+        left: 100%;
+    }
+}
+
+
+
+
+/* phần footer */
+.footer{
+    width: 100%;
+    height: 750px;
+    position: relative;
+}
+/* phần footer__team__egg */
+.footer__team__egg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1020px;
+    background: url(../img/ảnh8.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer__team__egg::before{
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 739px;
+    height: 420px;
+    background: url(../img/ảnh9.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 99;
+}
+.footer__team__eeg-head{
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 740px;
+    height: 1200px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/egg-top.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.1s;
+    animation: eggVibrate infinite  0.3s linear, moveY 10s linear infinite;
+    -webkit-animation: eggVibrate infinite  0.3s linear, moveY 10s linear infinite 3s;
+    zoom: 0.8;
+}
+@keyframes moveY{
+    0%{
+
+    }30%{
+        bottom: 15%;
+    }40%{
+        bottom: 32%;
+    }80%{
+        bottom: 30%;
+    }90%{
+        bottom: 15%;
+    }
+}
+@keyframes eggVibrate{
+    0%{
+        margin-left: 2px;
+    }80%{
+        margin-left: -2px;
+    }
+}
+.footer__team__eggshell{
+    position: absolute;
+    bottom: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 740px;
+    height: 834px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/egg-bottom-small.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: center;
+    z-index: 9;
+    transition: 0.3s;
+    animation: moveEggshell infinite  0.3s linear 1s;
+    -webkit-animation: moveEggshell infinite  0.3s linear;
+    zoom: 0.8;
+}
+@keyframes moveEggshell{
+    0%{
+        margin-left: 2px;
+    }30%{
+        margin-left: -2px;
+    }40%{
+        margin-left: 2px;
+    }80%{
+        margin-left: -2px;
+    }90%{
+        margin-left: 2px;
+    }
+}
+.footer__team__content{
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.footer__team__content__title-extra{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 500;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+}
+.footer__team__content__title-main{
+    font-size: 6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-family: 'Permanent Marker', cursive;
+    padding: 12px;
+    margin: 0;
+    line-height: 8rem;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+.footer__team__btn{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 360px;
+    height: 60px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    text-align: center;
+    z-index: 99;
+    line-height: 60px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.footer__team__btn:hover{
+    background-color:#3fa330;
+}
+/* phần footer__contact */
+.footer__contact{
+    position: relative;
+}
+.footer__contact__background{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer__contact__background::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -28px;
+    width: 466px;
+    height: 438px;
+    background: url(https://www.designzillas.com/themes/custom/bedrock/images/footer-bones.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__contact__list{
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.footer__contact__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__contact__item__link{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 12px;
+    transition: 0.3s;
+}
+.footer__contact__item__link:hover{
+    color:#3fa330;
+}
+.footer__contact__tem__icon{
+    width: 20px;
+    height: 20px;
+    background: url(	https://www.designzillas.com/themes/custom/bedrock/images/icon-crossbones.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.footer__contact__socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+.footer__contact__social{
+    font-size: 3rem;
+    color: var(--white-color);
+    text-decoration: none;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.footer__contact__social:hover{
+    background-color:#3fa330;
+}
+.footer__contact__text1,
+.footer__contact__text2{
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--white-color);
+    display: block;
+    padding: 12px;
+    text-transform: capitalize;
+    text-align: center;  
+    line-height: 3rem;
+    z-index: 99;
+}
+.footer__contact__text2{
+    margin: 20px 0 50px;
+}
+.footer__contact__text a{
+    color: rgb(74, 74, 231);
+}
